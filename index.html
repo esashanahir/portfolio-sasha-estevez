@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sasha Estevez - Portfolio de Análisis de Datos</title>
     <style>
-        /* Estilos minimalistas y responsive */
+        /* Estilos minimalistas y responsive (mismo que antes) */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -111,6 +111,57 @@
             .projects { grid-template-columns: 1fr; }
             section { padding: 0 0.5rem; }
         }
+
+        /* NUEVO: Estilos para el Slider de Imágenes */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 250px; /* Ajusta la altura según tus imágenes */
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen para llenar sin distorsionar */
+        }
+        .slider-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .dot.active {
+            background-color: #3498db;
+        }
+        .dot:hover {
+            background-color: #2980b9;
+        }
+        input[type="radio"] {
+            display: none; /* Oculta los radio buttons */
+        }
     </style>
 </head>
 <body>
@@ -127,8 +178,26 @@
     <section id="projects">
         <h2>Proyectos</h2>
         <div class="projects">
+            <!-- Proyecto 1: Power BI con Slider -->
             <div class="project-card">
                 <h3 class="project-title">Análisis de Datos y Dashboard Interactivo en Power BI</h3>
+                <div class="slider-container">
+                    <div class="slider" id="slider1">
+                        <div class="slide"><img src="powerbi-1.jpg" alt="Vista general del dashboard Power BI"></div>
+                        <div class="slide"><img src="powerbi-2.jpg" alt="Filtro dinámico en Power BI"></div>
+                        <div class="slide"><img src="powerbi-3.jpg" alt="Gráfico detallado en Power BI"></div>
+                        <!-- Agrega más: <div class="slide"><img src="powerbi-4.jpg" alt="..."></div> -->
+                    </div>
+                    <div class="slider-dots">
+                        <label class="dot active" for="dot1-1"></label>
+                        <label class="dot" for="dot1-2"></label>
+                        <label class="dot" for="dot1-3"></label>
+                        <!-- Agrega más dots para más imágenes -->
+                    </div>
+                    <input type="radio" id="dot1-1" name="slider1" checked>
+                    <input type="radio" id="dot1-2" name="slider1">
+                    <input type="radio" id="dot1-3" name="slider1">
+                </div>
                 <p class="project-description">Trabajo final de la carrera de Data Analyst en CoderHouse (2025). Seleccioné un dataset real y apliqué el proceso completo de análisis de datos, desde la preparación hasta la visualización final.</p>
                 <ul class="project-tasks">
                     <li>Limpieza y normalización del dataset para garantizar calidad y consistencia de la información.</li>
@@ -140,8 +209,24 @@
                 <a href="[Enlace al dashboard o GitHub]" class="btn" target="_blank">Ver Proyecto</a>
             </div>
 
+            <!-- Proyecto 2: Tableau con Slider -->
             <div class="project-card">
                 <h3 class="project-title">Visualización y Análisis de Datos en Tableau</h3>
+                <div class="slider-container">
+                    <div class="slider" id="slider2">
+                        <div class="slide"><img src="tableau-1.jpg" alt="Vista general del dashboard Tableau"></div>
+                        <div class="slide"><img src="tableau-2.jpg" alt="Mapa interactivo en Tableau"></div>
+                        <div class="slide"><img src="tableau-3.jpg" alt="KPIs en Tableau"></div>
+                    </div>
+                    <div class="slider-dots">
+                        <label class="dot active" for="dot2-1"></label>
+                        <label class="dot" for="dot2-2"></label>
+                        <label class="dot" for="dot2-3"></label>
+                    </div>
+                    <input type="radio" id="dot2-1" name="slider2" checked>
+                    <input type="radio" id="dot2-2" name="slider2">
+                    <input type="radio" id="dot2-3" name="slider2">
+                </div>
                 <p class="project-description">Trabajo final del curso de Tableau en CoderHouse (2025). A partir de un dataset elegido, realicé el proceso de exploración, limpieza básica y transformación de la información, para desarrollar un dashboard visual e interactivo.</p>
                 <ul class="project-tasks">
                     <li>Selección y análisis exploratorio del dataset.</li>
@@ -154,8 +239,24 @@
                 <a href="[Enlace al dashboard en Tableau Public o GitHub]" class="btn" target="_blank">Ver Proyecto</a>
             </div>
 
+            <!-- Proyecto 3: Excel con Slider -->
             <div class="project-card">
                 <h3 class="project-title">Análisis de Datos y Creación de Dashboard en Excel</h3>
+                <div class="slider-container">
+                    <div class="slider" id="slider3">
+                        <div class="slide"><img src="excel-1.jpg" alt="Vista general del dashboard Excel"></div>
+                        <div class="slide"><img src="excel-2.jpg" alt="Tabla dinámica en Excel"></div>
+                        <div class="slide"><img src="excel-3.jpg" alt="Gráficos interactivos en Excel"></div>
+                    </div>
+                    <div class="slider-dots">
+                        <label class="dot active" for="dot3-1"></label>
+                        <label class="dot" for="dot3-2"></label>
+                        <label class="dot" for="dot3-3"></label>
+                    </div>
+                    <input type="radio" id="dot3-1" name="slider3" checked>
+                    <input type="radio" id="dot3-2" name="slider3">
+                    <input type="radio" id="dot3-3" name="slider3">
+                </div>
                 <p class="project-description">Proyecto práctico desarrollado en Microsoft Excel durante el curso de Excel Avanzado en CoderHouse (2025). Consistió en diseñar un dataset a medida y aplicar técnicas de organización, análisis y visualización dentro de Excel.</p>
                 <ul class="project-tasks">
                     <li>Diseño y estructuración del dataset con criterios de limpieza y consistencia.</li>
@@ -173,5 +274,17 @@
     <footer>
         <p>&copy; 2025 Sasha Estevez. Todos los derechos reservados. | Quilmes, Buenos Aires, Argentina</p>
     </footer>
-</body>
-</html>
+
+    <!-- NUEVO: JavaScript Simple para el Slider (Opcional, para navegación automática o mejor control) -->
+    <script>
+        // Esto hace que los dots controlen el slider (CSS ya lo maneja, pero este JS mejora la transición)
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliders = document.querySelectorAll('.slider');
+            sliders.forEach((slider, sliderIndex) => {
+                const dots = slider.parentElement.querySelectorAll('.dot');
+                const radioInputs = slider.parentElement.querySelectorAll('input[type="radio"]');
+                
+                radioInputs.forEach((radio, index) => {
+                    radio.addEventListener('change', function() {
+                        const numSlides = slider.children.length;
+                        slider.style.transform = `translate
