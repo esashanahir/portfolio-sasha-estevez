@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasha Estevez - Portfolio de Análisis de Datos</title>
+    <style>
+        /* Estilos minimalistas y responsive */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #fff;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin: 0.5rem 0;
+        }
+        section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .intro {
+            text-align: center;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-title {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .project-description {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .project-tasks {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .project-tasks li {
+            margin-bottom: 0.5rem;
+        }
+        .project-result {
+            font-style: italic;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .projects { grid-template-columns: 1fr; }
+            section { padding: 0 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sasha Estevez</h1>
+        <p class="subtitle">Data Analyst | Portfolio de Proyectos en Análisis de Datos</p>
+    </header>
+
+    <section class="intro">
+        <h2>Sobre Mí</h2>
+        <p>Soy una profesional de 25 años de Quilmes, Buenos Aires, con más de 5 años de experiencia en gestión operativa, logística y producción en sectores inmobiliario y publicitario. Recientemente graduada como Data Analyst en CoderHouse (2025), con enfoque en herramientas como Power BI, Tableau y Excel. Mis proyectos demuestran mi capacidad para limpiar, analizar y visualizar datos de manera efectiva, facilitando decisiones basadas en métricas clave. Busco oportunidades para aplicar estas habilidades en entornos dinámicos. Contacto: [Tu email] | LinkedIn: <a href="[Tu perfil de LinkedIn]" style="color: #3498db;">[Tu perfil]</a></p>
+    </section>
+
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3 class="project-title">Análisis de Datos y Dashboard Interactivo en Power BI</h3>
+                <p class="project-description">Trabajo final de la carrera de Data Analyst en CoderHouse (2025). Seleccioné un dataset real y apliqué el proceso completo de análisis de datos, desde la preparación hasta la visualización final.</p>
+                <ul class="project-tasks">
+                    <li>Limpieza y normalización del dataset para garantizar calidad y consistencia de la información.</li>
+                    <li>Creación de columnas personalizadas, campos calculados y medidas DAX.</li>
+                    <li>Diseño del modelo de datos con relaciones optimizadas entre tablas.</li>
+                    <li>Elaboración de un dashboard interactivo en Power BI, con botones de navegación, filtros dinámicos y gráficos personalizados con identidad visual.</li>
+                </ul>
+                <p class="project-result">Resultado: Un panel profesional que permite explorar los datos de manera clara y dinámica, facilitando la toma de decisiones basada en métricas clave.</p>
+                <!-- Agrega imagen si tienes: <img src="powerbi-screenshot.jpg" alt="Dashboard Power BI" style="width:100%; border-radius:5px; margin-top:1rem;"> -->
+                <a href="[Enlace al dashboard o GitHub]" class="btn" target="_blank">Ver Proyecto</a>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Visualización y Análisis de Datos en Tableau</h3>
+                <p class="project-description">Trabajo final del curso de Tableau en CoderHouse (2025). A partir de un dataset elegido, realicé el proceso de exploración, limpieza básica y transformación de la información, para desarrollar un dashboard visual e interactivo.</p>
+                <ul class="project-tasks">
+                    <li>Selección y análisis exploratorio del dataset.</li>
+                    <li>Limpieza y preparación de los datos para su correcta interpretación.</li>
+                    <li>Creación de diversas visualizaciones (gráficos de barras, líneas, mapas y KPIs).</li>
+                    <li>Diseño de un dashboard interactivo con filtros, jerarquías y navegación intuitiva.</li>
+                    <li>Aplicación de principios de diseño visual y storytelling con datos.</li>
+                </ul>
+                <p class="project-result">Resultado: Un panel profesional que permite analizar métricas clave, identificar patrones y comunicar hallazgos de forma clara y visualmente atractiva.</p>
+                <!-- Agrega imagen si tienes: <img src="tableau-screenshot.jpg" alt="Dashboard Tableau" style="width:100%; border-radius:5px; margin-top:1rem;"> -->
+                <a href="[Enlace al dashboard en Tableau Public o GitHub]" class="btn" target="_blank">Ver Proyecto</a>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Análisis de Datos y Creación de Dashboard en Excel</h3>
+                <p class="project-description">Proyecto práctico desarrollado en Microsoft Excel durante el curso de Excel Avanzado en CoderHouse (2025). Consistió en diseñar un dataset a medida y aplicar técnicas de organización, análisis y visualización dentro de Excel.</p>
+                <ul class="project-tasks">
+                    <li>Diseño y estructuración del dataset con criterios de limpieza y consistencia.</li>
+                    <li>Organización de la información mediante tablas dinámicas y segmentadores.</li>
+                    <li>Creación de gráficos interactivos y visualizaciones para representar indicadores clave.</li>
+                    <li>Aplicación de formato profesional y diseño visual coherente.</li>
+                    <li>Desarrollo de un dashboard final funcional, claro y fácil de interpretar.</li>
+                </ul>
+                <p class="project-result">Resultado: Un panel dinámico que permite analizar la información de manera visual, intuitiva y directamente en Excel, integrando todas las etapas del proceso de análisis en una única herramienta.</p>
+                <!-- Agrega imagen si tienes: <img src="excel-screenshot.jpg" alt="Dashboard Excel" style="width:100%; border-radius:5px; margin-top:1rem;"> -->
+                <a href="[Enlace al archivo Excel o GitHub]" class="btn" target="_blank">Ver Proyecto</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sasha Estevez. Todos los derechos reservados. | Quilmes, Buenos Aires, Argentina</p>
+    </footer>
+</body>
+</html>
